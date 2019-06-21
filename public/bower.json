@@ -1,0 +1,20 @@
+{
+  "name": "Phalcon tutorial",
+  "homepage": "https://github.com/brunoom1/tutorial-phalcon",
+  "authors": [
+    "Gabriel Menodnça <gabrielmendoncanf@gmail.com>"
+  ],
+  "description": "Componentes para frontend do tutorial",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap4": "^4.3.1"
+  }
+}

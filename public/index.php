@@ -7,6 +7,8 @@ use Phalcon\Mvc\View;
 use Phalcon\Mvc\Url as UrlProvider;
 use Phalcon\Mvc\Application;
 
+use Phalcon\Flash\Direct as FlashDirect;
+
 
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
@@ -28,11 +30,21 @@ $di->set('view', function () {
 	return $view;
 });
 
-// $di->set('url', function () {
-// 	$url = new UrlProvider();
-// 	$url->setBaseUri('/');
-// 	return $url;
-// });
+$di->set('url', function () {
+	$url = new UrlProvider();
+	$url->setBaseUri('/');
+	return $url;
+});
+
+$di->set('flash', function () {
+	$flash = new FlashDirect([
+		'error' => 'alert alert-danger',
+		'success' => 'alert alert-success',
+		'notice' => 'alert alert-notice',
+		'warning' => 'alert alert-warning'
+	]);
+	return $flash;
+});
 
 $application = new Application($di);
 

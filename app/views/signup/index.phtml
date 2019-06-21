@@ -1,19 +1,65 @@
-<h2>Sign up using this form</h2>
 
-<?php echo $this->tag->form("signup/register"); ?>
 
-    <p>
-        <label for="name">Name</label>
-        <?php echo $this->tag->textField("name"); ?>
-    </p>
+<div style="max-width: 300px; margin: 0 auto">
+    <?php echo $this->tag->form(["signup/register"]); ?>
 
-    <p>
-        <label for="email">E-Mail</label>
-        <?php echo $this->tag->textField("email"); ?>
-    </p>
+        <h1 class="h3 mb-3 font-weight-normal">
+          Cadastro de usuários
+        </h1>
+        <div class="form-group">
+            <label for="inputEmail">
+                Nome: 
+            </label>
+            <?php echo $this->tag->textField([
+                'nome', 
+                "class" => "form-control", 
+                'placeholder' => 'Seu nome', 
+                'type' => 'text'
+            ]); ?>
+        </div>
 
-    <p>
-        <?php echo $this->tag->submitButton("Register"); ?>
-    </p>
+        <div class="form-group">
+            <label for="inputEmail">
+                Email
+            </label>
+            <?php echo $this->tag->textField([
+                'email', 
+                "class" => "form-control", 
+                'placeholder' => 'Seu e-mail', 
+                'type' => 'email'
+            ]); ?>
+        </div>
 
-</form>
+        <div class="form-group">
+            <label for="inputPassword">
+                Password
+            </label>
+            <?php echo $this->tag->passwordField([
+                'password', 
+                "class" => "form-control", 
+                'placeholder' => 'senha', 
+                'type' => 'password'
+            ]); ?>
+        </div>      
+
+        <div class="form-group">
+            <label for="inputPassword">
+                Repita a senha
+            </label>
+            <?php echo $this->tag->passwordField([
+                'repassword', 
+                "class" => "form-control", 
+                'placeholder' => 'senha', 
+                'type' => 'password'
+            ]); ?>
+        </div>      
+
+        <?php echo $this->tag->submitButton([
+            "Signup", 
+            'class' => 'btn btn-lg btn-primary btn-block',
+            'style' => 'margin-bottom: 20px'
+        ]); ?>
+
+    </form>
+    
+</div>

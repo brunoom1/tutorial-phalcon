@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/bootstrap4/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <title>
+      Tutorial - <?php echo $this->view->pageTitle; ?>
+    </title>
+  </head>
+  <body>
+
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+
+        <h5 class="my-0 mr-md-auto font-weight-normal">
+          <a href="/">
+            <span style="background-color: #263646; padding: 15px; margin-right: 10px; border-radius: 4px">
+              <img src="https://assets.phalconphp.com/phalcon/images/svg/phalcon-logo-white-105x40.svg" alt="" />
+            </span>
+          </a>
+          <strong style="text-transform: uppercase; border-top: solid 2px #ddd; border-bottom: solid 2px #ddd; padding: 4px 0">
+            Tasks            
+          </strong>
+        </h5>
+
+        <nav class="my-2 my-md-0 mr-md-3">
+          <?php echo $this->tag->linkTo(['/', 'Principal', 'class' => 'p-2 text-dark']); ?>
+          <?php echo $this->tag->linkTo(['/sobre', 'Sobre', 'class' => 'p-2 text-dark']); ?>
+          <?php echo $this->tag->linkTo(['/suporte', 'Suporte', 'class' => 'p-2 text-dark']); ?>
+        </nav>
+      
+      <?php echo $this->tag->linkTo(['/signup', 'Entrar ou cadastrar', 'class' => 'btn btn-outline-primary']); ?>
+    
+    </div>
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col" style="background-color: #273646; padding: 10px; text-align: center; border-radius: 5px; margin-bottom: 40px">
+          <img src="https://phalconphp.com/images/phalcon1.png" alt="" />
+          <span style="font-weight: bolder; color: white"> TASKS </span>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col">
+          <?php echo $this->getContent(); ?>
+        </div>        
+      </div>      
+
+      <footer class="pt-4 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <small class="d-block mb-3 text-muted">© 2017-2019</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+  </body>
+</html>
